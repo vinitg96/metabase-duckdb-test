@@ -118,3 +118,33 @@
 2025-08-31T00:35:49.805375+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - gold/gold_fact_sales.sql
 2025-08-31T00:35:49.811446+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - gold/gold_fact_sales.sql executado em 0.01 segundos
 2025-08-31T00:35:49.811920+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('gold/gold_fact_sales.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7f3dafd246b0>) kwargs: {}
+2025-08-31T02:05:04.448207+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - bronze/ingestao_bronze.sql
+2025-08-31T02:05:04.664841+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - bronze/ingestao_bronze.sql executado em 0.22 segundos
+2025-08-31T02:05:04.665268+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('bronze/ingestao_bronze.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.666178+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - silver/silver.erp_px_cat_g1v2.sql
+2025-08-31T02:05:04.674748+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - silver/silver.erp_px_cat_g1v2.sql executado em 0.01 segundos
+2025-08-31T02:05:04.675212+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('silver/silver.erp_px_cat_g1v2.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.675449+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - silver/silver_crm_cust_info.sql
+2025-08-31T02:05:04.722238+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - silver/silver_crm_cust_info.sql executado em 0.05 segundos
+2025-08-31T02:05:04.722740+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('silver/silver_crm_cust_info.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.722940+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - silver/silver_crm_prod_info.sql
+2025-08-31T02:05:04.742579+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - silver/silver_crm_prod_info.sql executado em 0.02 segundos
+2025-08-31T02:05:04.742849+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('silver/silver_crm_prod_info.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.742978+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - silver/silver_crm_sales_details.sql
+2025-08-31T02:05:04.799525+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - silver/silver_crm_sales_details.sql executado em 0.06 segundos
+2025-08-31T02:05:04.799783+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('silver/silver_crm_sales_details.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.799876+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - silver/silver_erp_cust_az12.sql
+2025-08-31T02:05:04.814144+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - silver/silver_erp_cust_az12.sql executado em 0.01 segundos
+2025-08-31T02:05:04.814565+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('silver/silver_erp_cust_az12.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.814729+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - silver/silver_erp_loc_a101.sql
+2025-08-31T02:05:04.827823+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - silver/silver_erp_loc_a101.sql executado em 0.01 segundos
+2025-08-31T02:05:04.828239+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('silver/silver_erp_loc_a101.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.828949+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - gold/gold_dim_customers.sql
+2025-08-31T02:05:04.833877+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - gold/gold_dim_customers.sql executado em 0.00 segundos
+2025-08-31T02:05:04.834147+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('gold/gold_dim_customers.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.834247+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - gold/gold_dim_products.sql
+2025-08-31T02:05:04.838736+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - gold/gold_dim_products.sql executado em 0.00 segundos
+2025-08-31T02:05:04.839173+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('gold/gold_dim_products.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}
+2025-08-31T02:05:04.839293+0000 | INFO | utils.tratamento_erros:wrapper:9 - Iniciando read_and_execute_query - gold/gold_fact_sales.sql
+2025-08-31T02:05:04.843685+0000 | INFO | utils.tratamento_erros:wrapper:13 - read_and_execute_query - gold/gold_fact_sales.sql executado em 0.00 segundos
+2025-08-31T02:05:04.843957+0000 | DEBUG | utils.tratamento_erros:wrapper:14 - Executando: read_and_execute_query - args: ('gold/gold_fact_sales.sql', <duckdb.duckdb.DuckDBPyConnection object at 0x7ff9cb54eaf0>) kwargs: {}

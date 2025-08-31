@@ -8,9 +8,13 @@ __pycache__/
 *.pyo
 *.log
 
-
+*.py
 
 # Documentação e testes
 README.md
 readme.txt
 tests.sql
+
+
+
+
