@@ -1,0 +1,16 @@
+# Git e ambientes
+.git/
+.venv/
+
+# Logs e caches
+__pycache__/
+*.pyc
+*.pyo
+*.log
+
+
+
+# Documentação e testes
+README.md
+readme.txt
+tests.sql

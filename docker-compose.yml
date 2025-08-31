@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  metabase:
+    build:
+      context: .
+      dockerfile: dockerfile_metabase
+    container_name: metabase_duckdb
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./database:/app/database
+    depends_on:
+      - python-orquestrador
+
+    # environment:
+    #   MB_DB_FILE: /app/database/metabase.db   # banco interno do Metabase
+    #   DUCKDB_PATH: /app/database/dw.duckdb    # seu DW em DuckDB
+
+  python-orquestrador:
+    build:
+      context: .
+      dockerfile: dockerfile_etl
+    container_name: etl_metabase
+    volumes:
+      - ./database:/app/database
+      - ./logs:/app/logs
+      - ./raw:/app/raw
+
+
+  #-v $(pwd)/database:/app/database/ -v $(pwd)/logs:/app/logs/ -v $(pwd)/raw:/app/raw python-dw

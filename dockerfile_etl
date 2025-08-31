@@ -1,0 +1,71 @@
+FROM python:3.11-slim
+
+# run executa na criação da imagem
+# CMD na criação do container defualt sobrescrevido pelo comando no final do comando
+RUN pip install --no-cache-dir uv
+
+WORKDIR /app
+
+# Copia pyproject.toml e poetry.lock
+COPY pyproject.toml uv.lock* /app/
+
+# Instala dependências do projeto
+RUN uv sync --locked
+
+
+
+#Resumindo: a barra final na fonte indica “copie o conteúdo da pasta”, enquanto sem a barra você copia a pasta em si.
+# A barra no destino é opcional, mas geralmente usada para indicar que é uma pasta dentro do container.
+
+# Copia scripts e diretório de dados
+COPY bronze/ /app/bronze/
+COPY silver/ /app/silver/
+COPY gold/ /app/gold/
+COPY orquestrador.py /app/
+COPY utils/logs.py /app/utils/
+COPY utils/tratamento_erros.py /app/utils/
+
+##COPY . /app com dockerignore
+
+WORKDIR /app
+
+# Comando default: roda seu script ETL
+CMD ["uv", "run", "orquestrador.py"]
+
+
+# volume dos logs, database, raw 
+
+
+# builda imagem
+
+# docker build -f dockerfile_etl -t etl_duckdb .
+#-f especifica arquivo
+#-t nome da imagem
+# . contexto
+# --no-cache no final força rebuuilde de tudo
+
+
+#rsobe container docker run
+# Cria um container novo a partir de uma imagem.
+# Opcionalmente já executa o comando definido na imagem (ou que você passar no final).
+# Sempre que você usa docker run, é como se estivesse ligando uma máquina nova.
+# Se você der outro docker run na mesma imagem, vai criar outro container diferente.
+
+#container iteratuvi
+#docker run -dit --name meu_container nome_da_imagem tail -f /dev/null
+#docker exec -it container bash
+
+
+# Limpe cache de build:
+
+# docker builder prune -f
+
+# Delete imagem antiga, se existir:
+# docker rmi etl_duckdb
+# Rebuild com no-cache:
+
+
+# docker build -f dockerfile_etl -t etl_duckdb . --no-cache
+
+# docker run --name etl_metabase -v $(pwd)/database:/app/database/ -v $(pwd)/logs:/app/logs/ -v $(pwd)/raw:/app/raw python-dw
+# dpcker start -a etl_metabase -> ver os logs 
